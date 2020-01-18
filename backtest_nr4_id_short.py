@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 
 
-portfolio = ["BTC/USDT","ETH/USDT","XRP/USDT","EOS/USDT","LTC/USDT"] 
+portfolio = ["BTC/USDT","ETH/USDT","XRP/USDT","EOS/USDT","BCH/USDT"] 
 p = [10,5,5,5,5]
 
 binance = ccxt.binance()
