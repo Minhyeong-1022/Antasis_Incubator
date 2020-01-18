@@ -85,8 +85,8 @@ pro5 = df
 
 
 
-#ret_mean = (pro1['hpr']+pro2['hpr']+pro3['hpr']+pro4['hpr']+pro5['hpr'])/5
-ret_mean = (pro1['hpr']+pro3['hpr']+pro4['hpr']+pro5['hpr'])/4
+ret_mean = (pro1['hpr']+pro2['hpr']+pro3['hpr']+pro4['hpr']+pro5['hpr'])/5
+#ret_mean = (pro1['hpr']+pro3['hpr']+pro4['hpr']+pro5['hpr'])/4
 hpr = list(ret_mean)
 
 dd_mean = (ret_mean.cummax() - ret_mean) / ret_mean.cummax() * 100
