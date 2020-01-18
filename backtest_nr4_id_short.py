@@ -21,7 +21,7 @@ df['nr4'] = (df['high']-df['low']).rolling(window=4).min() >= (df['high']-df['lo
 df['inside_day'] = (df['high'].shift(1) > df['high']) & (df['low'].shift(1) < df['low'])
 df['signal'] = df['nr4'].shift(1) & df['inside_day'].shift(1)
 
-df['ret'] = np.where(df['signal'], df['open']/df['close'].shift(-p[0]),1)
+df['ret'] = np.where(df['signal'], df['open']/df['close'].shift(-p[0])-fee,1)
 df['hpr'] = df['ret'].cumprod()
 pro1 = df
 
@@ -35,7 +35,7 @@ df['nr4'] = (df['high']-df['low']).rolling(window=4).min() >= (df['high']-df['lo
 df['inside_day'] = (df['high'].shift(1) > df['high']) & (df['low'].shift(1) < df['low'])
 df['signal'] = df['nr4'].shift(1) & df['inside_day'].shift(1)
 
-df['ret'] = np.where(df['signal'], df['open']/df['close'].shift(-p[1]),1)
+df['ret'] = np.where(df['signal'], df['open']/df['close'].shift(-p[1])-fee,1)
 df['hpr'] = df['ret'].cumprod()
 pro2 = df
 
@@ -49,7 +49,7 @@ df['nr4'] = (df['high']-df['low']).rolling(window=4).min() >= (df['high']-df['lo
 df['inside_day'] = (df['high'].shift(1) > df['high']) & (df['low'].shift(1) < df['low'])
 df['signal'] = df['nr4'].shift(1) & df['inside_day'].shift(1)
 
-df['ret'] = np.where(df['signal'], df['open']/df['close'].shift(-p[2]),1)
+df['ret'] = np.where(df['signal'], df['open']/df['close'].shift(-p[2])-fee,1)
 df['hpr'] = df['ret'].cumprod()
 pro3 = df
 
@@ -63,7 +63,7 @@ df['nr4'] = (df['high']-df['low']).rolling(window=4).min() >= (df['high']-df['lo
 df['inside_day'] = (df['high'].shift(1) > df['high']) & (df['low'].shift(1) < df['low'])
 df['signal'] = df['nr4'].shift(1) & df['inside_day'].shift(1)
 
-df['ret'] = np.where(df['signal'], df['open']/df['close'].shift(-p[3]),1)
+df['ret'] = np.where(df['signal'], df['open']/df['close'].shift(-p[3])-fee,1)
 df['hpr'] = df['ret'].cumprod()
 pro4 = df
 
@@ -77,7 +77,7 @@ df['nr4'] = (df['high']-df['low']).rolling(window=4).min() >= (df['high']-df['lo
 df['inside_day'] = (df['high'].shift(1) > df['high']) & (df['low'].shift(1) < df['low'])
 df['signal'] = df['nr4'].shift(1) & df['inside_day'].shift(1)
 
-df['ret'] = np.where(df['signal'], df['open']/df['close'].shift(-p[4]),1)
+df['ret'] = np.where(df['signal'], df['open']/df['close'].shift(-p[4])-fee,1)
 df['hpr'] = df['ret'].cumprod()
 pro5 = df
 
